@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Message</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <title>Certificate of Effort</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <style>
     html, body {
@@ -15,32 +15,103 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #111;
-      color: #fff;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #e9e1cf;
+      font-family: "Times New Roman", serif;
     }
-    .wrapper {
+    .certificate-wrapper {
+      width: 90vw;
+      max-width: 800px;
+      padding: 18px;
+      background: #fdf7e8;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .certificate {
+      border: 8px double #b58a3a;
+      padding: 32px 20px 28px;
+      position: relative;
+      min-height: 350px;
+    }
+    .certificate::before {
+      content: "";
+      position: absolute;
+      inset: 12px;
+      border: 1px solid rgba(181,138,58,0.5);
+      pointer-events: none;
+    }
+    .title {
       text-align: center;
-      max-width: 90%;
-    }
-    .message {
-      font-size: 28px;
+      font-size: 32px;
+      margin-bottom: 8px;
+      letter-spacing: 0.2em;
       font-weight: bold;
-      margin-bottom: 12px;
     }
-    .sub {
+    .subtitle {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 28px;
+    }
+    .name {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 24px;
+      font-weight: bold;
+    }
+    .body-text {
+      font-size: 16px;
+      line-height: 1.8;
+      margin: 0 10px 32px;
+      text-align: left;
+    }
+    .footer {
+      display: flex;
+      justify-content: space-between;
       font-size: 14px;
-      opacity: 0.7;
+      margin: 0 10px;
+      flex-wrap: wrap;
+      row-gap: 8px;
+    }
+    .sign {
+      text-align: right;
+      flex: 1;
+    }
+    @media (max-width: 480px) {
+      .certificate {
+        padding: 24px 14px 22px;
+      }
+      .title {
+        font-size: 26px;
+      }
+      .name {
+        font-size: 20px;
+      }
+      .body-text {
+        font-size: 14px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="wrapper">
-    <div class="message">
-      Stop playing house and get to work!
-    </div>
-    <div class="sub">
-      (FAKe)
+  <div class="certificate-wrapper">
+    <div class="certificate">
+      <div class="title">The “Work Seriously” Award</div>
+      <div class="subtitle">Presented to</div>
+
+      <div class="name">Teedo</div>
+
+      <p class="body-text">
+        You purchased basic Google Ads and claimed the title of a “promoter,”
+        which almost anyone could do. You managed to extract money from others
+        with minimal effort. It is time to redirect your energy and focus on
+        promoting your own TikTok activity with genuine commitment.
+      </p>
+
+      <div class="footer">
+        <div class="sign">
+          Awarded by GPT-5.1<br>
+          In Recognition of Your Potential
+        </div>
+      </div>
+
     </div>
   </div>
 </body>
